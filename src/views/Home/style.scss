@@ -1,0 +1,63 @@
+@function vw($value, $base: 1920) {
+  @return $value / $base * 100vw;
+}
+
+@function vh($value, $base: 800) {
+  @return $value / $base * 100vh;
+}
+
+@function vmin($value, $base: 375) {
+  @return $value / $base * 100vmin;
+}
+.add-form {
+  background: #ffffff;
+  box-shadow: 0px vw(5) vw(30) 0 rgba(0, 0, 0, 0.1);
+  border-radius: vw(10);
+  box-sizing: border-box;
+  padding: vw(25);
+  input {
+    font-weight: 700;
+    font-size: vw(28);
+    margin-bottom: vw(10);
+  }
+  textarea {
+    font-size: vw(20);
+    resize: none;
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    svg {
+      margin-right: vw(15);
+    }
+  }
+}
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+input,
+textarea {
+  border: 0;
+  outline: none;
+  width: 100%;
+  color: #2c2c2c;
+  &::-webkit-input-placeholder {
+    color: #7c7c7c;
+  }
+  &::-moz-placeholder {
+    color: #7c7c7c;
+  }
+  &:-ms-input-placeholder {
+    color: #7c7c7c;
+  }
+  &::-ms-input-placeholder {
+    color: #7c7c7c;
+  }
+  &::placeholder {
+    color: #7c7c7c;
+  }
+}
